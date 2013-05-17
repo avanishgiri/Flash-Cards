@@ -1,23 +1,40 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Welcome to BARR Flashcards!</h1>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+  <% unless @user %>
+  <div class='user'>
+    
+    <h3> Login! </h3>
+    
+    <form id='login' action='/' method='post'>
+      <input type='email' name='email' placeholder='Email' required="required">
+      <input type='password' name='password' placeholder='Password'>
+      <input type='submit' value="Submit">
+    </form>
+    
+    <form id='signup' action='/' method='post'>
+      <input type='text' name='name' placeholder='Name'>
+      <input type='email' name='email' placeholder='Email' required="required">
+      <input type='password' name='password' placeholder='Password'>
+      <input type='submit' value='Submit'>
+    </form>
+
+  </div>
+  <% end %>
+
+  <div class='instructions'>
+    <p> 1) Do this
+    <p> 2) Do that
+    <p> 3) Do the other thing
+    <p> 4) Do another thing
+  </div>
+
+  <div class='decks'>
+    <% if @decks %> 
+      <% @decks.each do |deck| %>
+      <%= deck.name %>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>
