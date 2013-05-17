@@ -1,0 +1,15 @@
+<div class="container">
+<% @deck.cards.each do |card| %>
+  <div id="question/<%=card.id%>" style="visibility: hidden">
+    <%= card.question %>
+    <form action="/action" method="post">
+    </form>
+  </div>
+
+
+
+  <div id="answer/<%= card.id %>" style="visibility: hidden">
+    <%= card.answer %>
+  </div>
+<% end %>
+</div>
