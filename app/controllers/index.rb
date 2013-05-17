@@ -1,4 +1,4 @@
 get '/' do
-  # Look in app/views/index.erb
+  @decks = Decks.all
   erb :index
 end
