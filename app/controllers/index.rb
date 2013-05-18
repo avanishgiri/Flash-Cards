@@ -1,20 +1,23 @@
 get '/' do
+  p "NOW IN HOME"
+  p session[:user_id]
   @decks = Deck.all
-  erb :index
-end
-
-post '/' do
-  @decks = Deck.all
+  @user = User.where('id = ?',session[:user_id]).to_a[0]
+  p @user
   erb :index
 end
 
 post '/signup' do
-  create_user
-  erb :index
+  @user = create_user
+  p @user
+  session[:id] = @user.id
+  redirect '/'
 end
 
 post '/login' do
-  autheticate
+  authenticate(params[:email], params[:password])
+  p session[:user_id]
+  redirect '/'
 end
 
 post '/play/:deck_id' do
@@ -28,4 +31,7 @@ get '/play/:deck_id' do
   erb :play
 end
 
-
+get '/logout' do
+  session.clear
+  redirect '/'
+end

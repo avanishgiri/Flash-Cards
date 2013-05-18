@@ -1,12 +1,12 @@
 <div class="container">
   <h1>Welcome to BARR Flashcards!</h1>
 
-  <% unless session[:id]%>
+  <% unless @user %>
   <div class='user'>
 
     <h3> Login! </h3>
     
-    <form id='login' action='/' method='post'>
+    <form id='login' action='/login' method='post'>
       <input type='email' name='email' placeholder='Email' required="required">
       <input type='password' name='password' placeholder='Password'>
       <input type='submit' value="Submit">
@@ -14,7 +14,7 @@
 
     <h3> Sign up! </h3>
     
-    <form id='signup' action='/' method='post'>
+    <form id='signup' action='/signup' method='post'>
       <input type='text' name='name' placeholder='Name'>
       <input type='email' name='email' placeholder='Email' required="required">
       <input type='password' name='password' placeholder='Password'>
@@ -32,9 +32,8 @@
   </div>
   <% end %>
 
-  <% if session[:id]%>
-
-  
+  <% if @user %> 
+  <a href='/logout'>logout</a>
   <div class='stats'>
     <h2> Welcome <%= @user.name %> to your BARR Flashcards Profile Page </h2>
     <h3> Here are the decks you've played so far: </h3>
