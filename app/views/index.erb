@@ -1,9 +1,9 @@
 <div class="container">
   <h1>Welcome to BARR Flashcards!</h1>
 
-  <% unless @user %>
+  <% unless session[:id]%>
   <div class='user'>
-    
+
     <h3> Login! </h3>
     
     <form id='login' action='/' method='post'>
@@ -11,6 +11,8 @@
       <input type='password' name='password' placeholder='Password'>
       <input type='submit' value="Submit">
     </form>
+
+    <h3> Sign up! </h3>
     
     <form id='signup' action='/' method='post'>
       <input type='text' name='name' placeholder='Name'>
@@ -20,20 +22,35 @@
     </form>
 
   </div>
+
+  <h3> Instructions: </h3>
+  <div class='instructions'>
+    <p> 1) Do this </p>
+    <p> 2) Do that </p>
+    <p> 3) Do the other thing </p>
+    <p> 4) Do another thing </p>
+  </div>
   <% end %>
 
-  <div class='instructions'>
-    <p> 1) Do this
-    <p> 2) Do that
-    <p> 3) Do the other thing
-    <p> 4) Do another thing
-  </div>
+  <% if session[:id]%>
 
-  <div class='decks'>
-    <% if @decks %> 
-      <% @decks.each do |deck| %>
-      <%= deck.name %>
-      <% end %>
+  
+  <div class='stats'>
+    <h2> Welcome <%= @user.name %> to your BARR Flashcards Profile Page </h2>
+    <h3> Here are the decks you've played so far: </h3>
+
+    <% @user.rounds.each do |round| %>
+    <span> <%= round.deck.title %> : <%= round.num_correct %></span>
     <% end %>
+    </div>
+
+    <h3> Choose a deck and play a round! </h3>
+    <div class='decks'>
+      <% if @decks %> 
+      <% @decks.each do |deck| %>
+      <div id="deck"><a href="/play/<%= deck.id %>"><%= deck.title %></a><br><br></div>
+      <% end %>
+      <% end %>
+    </div>
+  <% end %>  
   </div>
-</div>

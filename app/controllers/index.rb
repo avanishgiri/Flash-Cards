@@ -1,6 +1,20 @@
 get '/' do
-  @decks = Decks.all
+  @decks = Deck.all
   erb :index
+end
+
+post '/' do
+  @decks = Deck.all
+  erb :index
+end
+
+post '/signup' do
+  create_user
+  erb :index
+end
+
+post '/login' do
+  autheticate
 end
 
 post '/play/:deck_id' do
@@ -13,3 +27,5 @@ get '/play/:deck_id' do
   @round = Round.find_by_deck_id(@deck.id)
   erb :play
 end
+
+
