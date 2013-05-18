@@ -1,5 +1,5 @@
 get '/' do
-  session[:id] = 1
+  session[:id] = 10
   erb :index
 end
 
@@ -19,20 +19,30 @@ post '/answer' do
   p params; puts; puts;
   card = Card.find(params[:card_id])
   @round = Round.find(params[:round_id])
+  p @round.num_correct
+  p "---------"
   deck = Deck.find(@round.deck_id)
   index = deck.cards.index(card) + 1
   @card = deck.cards[index]
   p card;
   puts;
   p @card
+  unless @card
+    p "hello"
+    return "hello"
+  end
+    p @round.num_correct
   if card.answer == params[:answer]
+    p "correct"
     @resp = "That was correct"
     @round.num_correct += 1;
-    return erb :_question#,:layout => false
+    p @round.num_correct
+    @round.save
+    return erb :_question,:layout => false
   end
   @resp = "Wrong answer."
   puts "we got here!"
-  erb :_question#, :layout => false
+  erb :_question, :layout => false
 end
 
 

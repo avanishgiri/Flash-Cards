@@ -8,7 +8,10 @@ $(document).ready(function() {
       data: $(this).serialize()
     }).done(function(response){
       console.log(response);
-      $('.stuff2').html(response).show();
+      if(response == 'hello')
+        window.location.href = "/";
+      else
+        $('.flash_box').html(response).slideDown();
     });
   });
 });
