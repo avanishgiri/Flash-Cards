@@ -1,5 +1,102 @@
-<div>
-  <form action="/play/10" method="post">
-    <input type="submit" value="play deck 10">
-  </form>
+<div class="container">
+
+  <% unless @user %>
+  <div class="hero-unit">
+
+    <h1>Welcome to BARR Flashcards!</h1><br>
+
+    <p>Test your knowledge by choosing a deck and playing a round, 
+      or become a member and make a deck of your own flashcards!</p>
+
+  </div>
+
+
+  <div class='row'>
+    <div class="span4">
+
+  <h3> Sign up! </h3>
+
+  <form id='signup' action='/signup' method='post'><br>
+    <input type='text' name='name' placeholder='Name'><br>
+    <input type='email' name='email' placeholder='Email' required="required"><br>
+    <input type='password' name='password' placeholder='Password'><br>
+    <input class="btn btn-primary" type='submit' value='Submit'>
+  </form><br>
+
+</div>
+
+<div class="span4">
+  <h3> Login! </h3>
+
+  <form id='login' action='/login' method='post'>
+    <input type='email' name='email' placeholder='Email' required="required"><br>
+    <input type='password' name='password' placeholder='Password'><br>
+    <input class="btn btn-primary" type='submit' value="Submit"><br>
+  </form><br>
+
+
+
+
+
+    <!-- </div class="span4">
+      <div class='instructions'>
+      <h3> Instructions: </h3>
+      
+      <p> 1) Do this </p>
+      <p> 2) Do that </p>
+      <p> 3) Do the other thing </p>
+      <p> 4) Do another thing </p>
+      </div>
+    </div> -->
+  </div>
+  <% end %>
+
+  <% if @user %> 
+  <div class='hero-unit'>
+
+    <form action='/logout' name='logout' method='get'>
+      <input class="btn btn-primary" type="submit" value="Log out">
+    </form>
+
+    <h1> Welcome <%= @user.name %></h1>
+    <h2> to your BARR Flashcards Profile Page </h2>
+
+
+    <div class='stats'>
+      <h3> Here are the decks you've played so far: </h3>
+
+      <% @user.rounds.each do |round| %>
+      <span> <%= round.deck.title %> : <%= round.num_correct %></span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class='span4'>
+    <h3> Create a deck of custom flashcards!</h3>
+
+    
+  <% end %> 
+
+
+
+  <div class='span4'>
+
+    <h3> Choose a deck and play a round! </h3>
+    
+    <% if @decks %> 
+    <% @decks.each do |deck| %>
+    <div id="deck">
+      <ul>
+        <li><a href="/play/<%= deck.id %>"><%= deck.title %></a><br><br>
+      </ul>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+
+  
+
+</div>
+</div>
+
 </div>

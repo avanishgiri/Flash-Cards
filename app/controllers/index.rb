@@ -1,6 +1,23 @@
 get '/' do
-  session[:id] = 10
+  p "NOW IN HOME"
+  p session[:user_id]
+  @decks = Deck.all
+  @user = User.where('id = ?',session[:user_id]).to_a[0]
+  p @user
   erb :index
+end
+
+post '/signup' do
+  @user = create_user
+  p @user
+  session[:id] = @user.id
+  redirect '/'
+end
+
+post '/login' do
+  authenticate(params[:email], params[:password])
+  p session[:user_id]
+  redirect '/'
 end
 
 post '/play/:deck_id' do
@@ -45,4 +62,9 @@ post '/answer' do
   erb :_question, :layout => false
 end
 
+
+get '/logout' do
+  session.clear
+  redirect '/'
+end
 
