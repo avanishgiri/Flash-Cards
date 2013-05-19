@@ -21,13 +21,14 @@ post '/login' do
 end
 
 post '/play/:deck_id' do
-  Round.create(deck_id: params[:deck_id], user_id: session[:id])
   redirect "/play/#{params[:deck_id]}"
 end
 
-get '/play/:deck_id' do  ### at this point we have params[:deck_id]
+get '/play/:deck_id' do  ### at this point we have params[:deck_id]]
+  @round = Round.create(deck_id: params[:deck_id], user_id: session[:id])
   @deck = Deck.find(params[:deck_id])
-  @round = Round.find_by_deck_id(@deck.id)
+  # @round = Round.find_by_deck_id(@deck.id)
+  p @round
   @card = @deck.cards.first
   erb :_question
 end
