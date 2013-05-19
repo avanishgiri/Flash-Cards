@@ -3,6 +3,7 @@ helpers do
     p "Inside Function"
     @user = User.find_by_email(params[:email])
     # p @user
+    redirect '/' unless @user
     if @user.password == params[:password]
       p "Password matches"
       session[:user_id] = @user.id

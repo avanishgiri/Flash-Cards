@@ -53,8 +53,8 @@
 
   <% if @user %> 
   <div class='hero-unit'>
-
-    <form action='/logout' name='logout' method='get'>
+    <% p @user%> 
+      <form action='/logout' name='logout' method='get'>
       <input class="btn btn-primary" type="submit" value="Log out">
     </form>
 
@@ -66,7 +66,7 @@
       <h3> Here are the decks you've played so far: </h3>
 
       <% @user.rounds.each do |round| %>
-      <span> <%= round.deck.title %> : <%= round.num_correct %></span>
+      <span> <%= round.deck.title %> : You got <%= round.num_correct %> correct!</span>
       <% end %>
     </div>
   </div>
