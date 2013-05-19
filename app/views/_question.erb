@@ -1,14 +1,23 @@
-<div class='flash_box' style="background-color:#0099cc">
+
+<div class='flash_box' style="background-color:white">
+    <% unless @card%>
+      <h2> No cards in deck :(</h2>
+    <% end%>
+    <% if @card %>
     <%= @card.question %>
     <form class="stuff" action="/answer" method="post">
       <input type="hidden" name="card_id" value="<%=@card.id%>">
       <input type="hidden" name="round_id" value="<%=@round.id%>">
-      <input type="text" name="answer" placeholder="Answer here">
-      <input type="submit" value="Answer!">
+      <input type="text" name="answer" placeholder="Answer here"><br>
+      <input class="btn btn-primary" type="submit" value="Answer!">
     </form>
+    <% end %>
+
 </div>
 <% if @resp %>
   <div id="Correct">
     <%= @resp %>
   </div>
+
 <% end %>
+

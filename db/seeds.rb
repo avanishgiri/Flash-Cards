@@ -19,6 +19,7 @@ File.open('capitals_raw').each do |line|
   capital = capital.gsub(/!/,'').strip.lstrip
   c = Card.new(question: "What is the capital of #{state}?", 
     answer: "#{capital}")
+
   c.save
   capitals_deck.cards << c
 end

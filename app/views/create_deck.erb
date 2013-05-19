@@ -1,7 +1,16 @@
-<h2>Create Deck</h2>
- <form id='create_card' action='/create_card' method='post'>
-          <input type='text' name='question' placeholder='Question'><br>
-          <input type='text' name='answer' placeholder='Answer'><br>
-          <input class="btn btn-primary" type='submit' value="Submit"><br>
-        </form><br>
+<div class="container">
 
+  <h2>Create Deck</h2>
+
+  <h3>Add your card information below:</h3>  
+  <form id='create_card' action='/create_card' method='post'>
+    <input type='text' name='question' placeholder='Question'><br>
+    <input type='text' name='answer' placeholder='Answer'><br>
+    <input class="btn btn-primary" type='submit' value="Submit"><br>
+  </form>
+
+  <h3>Click Done when your deck is complete!</h3>
+  <form id='done_create' action='/' method='get'>
+    <input class="btn btn-danger" type='submit' value="Done">
+  </form>
+</div>

@@ -66,9 +66,9 @@
     <div class='stats'>
       <h3> Here are the decks you've played so far: </h3>
 
-      <% @user.rounds.each do |round| %>
-      <span> <%= round.deck.title %> : You got <%= round.num_correct %> correct!</span>
-      <% end %>
+      <ul><% @user.rounds.each do |round| %>
+      <li><span> <%= round.deck.title %> : You got <%= round.num_correct %> correct!</span><br>
+      <% end %></ul>
     </div>
   </div>
 

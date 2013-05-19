@@ -39,15 +39,15 @@ post '/answer' do
   deck = Deck.find(@round.deck_id)
   index = deck.cards.index(card) + 1
   @card = deck.cards[index]
-  
-  unless @card
-    return "hello"
-  end
 
   if card.answer == params[:answer]
     @resp = "That was correct"
     @round.num_correct += 1;
+    p "Incrementing count"
     @round.save
+    unless @card
+      return "hello"
+    end
     return erb :_question,:layout => false
   end
 
