@@ -11,10 +11,14 @@ deck.save
 
 capitals_deck = Deck.create(title: "US Capitals")
 
-File.open('../capitals').each do |line|
-  line = line.chomp.split('-')
-  c = Card.new(question: "What is the capital of #{line[0].strip}?", 
-    answer: "#{line[1].lstrip}")
+File.open('capitals_raw').each do |line|
+  state = line[0..((line =~ /-/)-1)].strip
+  capital = line.match(/!.*%/)[0].gsub('%','')
+  first_digit = capital =~ /\d/
+  capital = capital[0...(first_digit)] if first_digit
+  capital = capital.gsub(/!/,'').strip.lstrip
+  c = Card.new(question: "What is the capital of #{state}?", 
+    answer: "#{capital}")
   c.save
   capitals_deck.cards << c
 end
