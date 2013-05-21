@@ -9,14 +9,12 @@ end
 
 post '/signup' do
   @user = create_user
-  p @user
-  session[:id] = @user.id
+ 
   redirect '/'
 end
 
 post '/login' do
   authenticate(params[:email], params[:password])
-  p session[:user_id]
   redirect '/'
 end
 
