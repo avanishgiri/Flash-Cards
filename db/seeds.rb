@@ -3,7 +3,9 @@ USERS = %w(Ben Avanish Ryan Robert)
 4.times { |i| User.create(name: USERS[i], password_hash: 'test')}
 
 10.times { |i| Card.create(question: "Question #{i}", answer: "answer")}
+SUBJECTS = %w(Ruby Geography Sports Other)
 
+SUBJECTS.each{|topic| Subject.create(title: topic)}
 
 deck = Deck.new(title: "Test-Deck")
 deck.cards << Card.all
@@ -23,3 +25,26 @@ File.open('capitals_raw').each do |line|
   c.save
   capitals_deck.cards << c
 end
+
+function Person(gender, height){
+	this.gender = gender;
+	this.height = height;
+}
+
+var person1 = new Person('male')
+
+function Person(gender, height){
+	this.gender = gender;
+	this.height = height;
+	this.heigher = 
+}
+
+
+Person.prototype.sayHello=function(){
+	console.log("hello")
+}
+
+person2 = new Person('female')
+
+person1.sayHello()
+person2.sayHello()

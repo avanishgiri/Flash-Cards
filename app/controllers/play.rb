@@ -24,9 +24,9 @@ post '/answer' do
     p "Incrementing count"
     @round.save
     unless @card
-      return "hello"
+      return erb :_results
     end
-    return erb :_question,:layout => false
+    return erb :_question
   end
 
   @resp = "Wrong answer."

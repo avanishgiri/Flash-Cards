@@ -4,6 +4,20 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
+.span4{
+	float:left;
+	width: 250px;
+}
+.subject {
+  float:left;
+  height:100px;
+  width: 100px;  
+}
+
+img {
+	max-width: 100px;
+}
 /*th {
   text-align: left;
 }

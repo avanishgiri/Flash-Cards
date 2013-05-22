@@ -8,100 +8,96 @@
     <p>Test your knowledge by choosing a deck and playing a round, 
       or become a member and make a deck of your own flashcards!</p>
 
+    </div>
+    <div class="span4">
+
+      <h3> Sign up! </h3>
+
+      <form id='signup' action='/signup' method='post'><br>
+        <input type='text' name='name' placeholder='Name'><br>
+        <input type='email' name='email' placeholder='Email' required="required"><br>
+        <input type='password' name='password' placeholder='Password'><br>
+        <input class="btn btn-primary" type='submit' value='Submit'>
+      </form><br>
+
+    </div>
+
+    <div class="span4">
+      <h3> Login! </h3>
+
+      <form id='login' action='/login' method='post'>
+        <input type='email' name='email' placeholder='Email' required="required"><br>
+        <input type='password' name='password' placeholder='Password'><br>
+        <input class="btn btn-primary" type='submit' value="Submit"><br>
+      </form><br>
+    </div>
+
+    <div class="span4">
+        <h3> Instructions: </h3>        
+        <p> 1) Do this </p>
+        <p> 2) Do that </p>
+        <p> 3) Do the other thing </p>
+        <p> 4) Do another thing </p>
+    </div>
   </div>
+    <% end %>
 
-
-    <div class='row'>
-      <div class="span4">
-
-        <h3> Sign up! </h3>
-
-        <form id='signup' action='/signup' method='post'><br>
-          <input type='text' name='name' placeholder='Name'><br>
-          <input type='email' name='email' placeholder='Email' required="required"><br>
-          <input type='password' name='password' placeholder='Password'><br>
-          <input class="btn btn-primary" type='submit' value='Submit'>
-        </form><br>
-
-      </div>
-
-      <div class="span4">
-        <h3> Login! </h3>
-
-        <form id='login' action='/login' method='post'>
-          <input type='email' name='email' placeholder='Email' required="required"><br>
-          <input type='password' name='password' placeholder='Password'><br>
-          <input class="btn btn-primary" type='submit' value="Submit"><br>
-        </form><br>
-      </div>
-
-
-
-
-
-    <!-- </div class="span4">
-      <div class='instructions'>
-      <h3> Instructions: </h3>
-      
-      <p> 1) Do this </p>
-      <p> 2) Do that </p>
-      <p> 3) Do the other thing </p>
-      <p> 4) Do another thing </p>
-      </div>
-    </div> -->
-  
-  <% end %>
-
-  <% if @user %> 
-  <div class='hero-unit'>
-    <% p @user%> 
+    <% if @user %> 
+    <div class='hero-unit'>
+      <% p @user%> 
       <form action='/logout' name='logout' method='get'>
-      <input class="btn btn-primary" type="submit" value="Log out">
-    </form>
+        <input class="btn btn-primary" type="submit" value="Log out">
+      </form>
 
-    <h1> Welcome <%= @user.name %></h1>
-    <h2> to your BARR Flashcards Profile Page </h2>
-
-
-    <div class='stats'>
-      <h3> Here are the decks you've played so far: </h3>
-
-      <ul><% @user.rounds.each do |round| %>
-      <li><span> <%= round.deck.title %> : You got <%= round.num_correct %> correct!</span><br>
-      <% end %></ul>
-    </div>
-  </div>
-
-    <div class='span4'>
-      <h3> Create a deck of custom flashcards!</h3>
-       <h4>Give your deck a name:</h4>
-    <form action="/create_deck" name="title" method="post">
-      <input type="text" name="title" placeholder="Deck title">
-      <input class="btn btn-primary" type="submit" value="Submit">
-    </form>
-    </div>
+      <h1> Welcome <%= @user.name %></h1>
+      <h2> to your BARR Flashcards Profile Page </h2>
 
 
-  <% end %> 
+      <div class='stats'>
+        <h3> Here are the decks you've played so far: </h3>
+
+        <ul><% @user.rounds.each do |round| %>
+          <li><span> <%= round.deck.title %> : You got <%= round.num_correct %> correct!</span><br>
+            <% end %></ul>
+          </div>
+        </div>
+
+        <div class='span4'>
+          <h3> Create a deck of custom flashcards!</h3>
+          <h4>Give your deck a name:</h4>
+          <form action="/create_deck" name="title" method="post">
+            <input type="text" name="title" placeholder="Deck title">
+            <h4>What subject does it belong to?</h4>
+            <form action="/create_deck" name="name" method="post">
+              <input type="text" name="name" placeholder="Subject">
+              <input class="btn btn-primary" type="submit" value="Submit">
+            </form>
+          </div>
+
+
+          <% end %> 
 
 
 
-    <div class='span4'>
+          <div class='span5'>
+            <h3 class="header" id="subject_header"> Choose a subject to study! </h3><br>
 
-    <h3 class="header" id="subject_header"> Choose a subject to study! </h3><br>
-    <div class="subject" id="Ruby">
-      <a href="/ruby"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfXdBh8Z1XefVKRIK7lOif-2f9JpwW4rAQdpy68fIgBvxk1E9j"></a>
-    </div>
-    <div class="subject" id="US States">
-      <a href="/US_states"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfXdBh8Z1XefVKRIK7lOif-2f9JpwW4rAQdpy68fIgBvxk1E9j"></a>
-    </div>
-    <div class="subject" id="Sports">
-      <a href="/sports"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfXdBh8Z1XefVKRIK7lOif-2f9JpwW4rAQdpy68fIgBvxk1E9j"></a>
-    </div>
-    <div class="subject" id="Other">
-      <a href="/other"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfXdBh8Z1XefVKRIK7lOif-2f9JpwW4rAQdpy68fIgBvxk1E9j"></a>
-    </div>
-  
-</div>
+            <div class="subject" id="Ruby">
+              <a href="/ruby"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSKmqK_JYh1_QmqprN_DH7wjzmMnkknFHT47ZA8Bzq5QsvmKHI7" style="max-width: 200px"></a>
+            </div>
 
-</div>
+            <div class="subject" id="Skillcrush">
+              <a href="/Geography"><img src="http://www.alleywatch.com/wp-content/uploads/2013/03/skillcrush-logo1.jpg" style="max-width: 200px"></a>
+            </div>
+
+            <div class="subject" id="Command Line">
+              <a href="/sports"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzDzShpjF7hZ7iRz2OpDg5l3nP24PxEvkhUC-NV-QiAIo44Fz90A" style="max-width: 200px"></a>
+            </div>
+
+            <div class="subject" id="Other">
+              <a href="/other"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRnWfs6w-vcOvFUqglRwB8654uDOgRza1qy9OIeAsvmuFhMByg" style="max-width: 120px"></a>
+            </div>
+
+          </div>
+
+        </div>

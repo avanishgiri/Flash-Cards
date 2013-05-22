@@ -1,1 +1,13 @@
-Subjects.erb
+<h1><%= @subject.name%></h1>
+<% if @subject.decks %> 
+<% @subject.decks.each do |deck| %>
+<% @deck = Deck.find_by_id(deck.id) %>  
+<p><%= @deck.cards.all %></p>
+<div id="deck">
+  <ul>
+    <li><a href="/play/<%= deck.id %>"><%= deck.title %></a><br><br>
+  </ul>
+</div>
+  <% end %>
+  <% end %>
+</div>
