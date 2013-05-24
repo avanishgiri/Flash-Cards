@@ -1,23 +1,40 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 900px;
+  height:350px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
 
-.span4{
+div .span4 {
+	width: 300px;
 	float:left;
-	width: 250px;
+}
+
+.span5{
+  width:900px;
+  height: 300px;
+  clear:both;
 }
 .subject {
   float:left;
-  height:100px;
-  width: 100px;  
+  height:150px;
+  width: 200px;
 }
 
 img {
-	max-width: 100px;
+  max-width: 150px;
+  max-height: 150px;
 }
+
+#Other img {
+  height:145px;
+  margin-left: 20px;
+  border: 1px;
+  border-width: 4px;
+  border-style: double;
+}
+
 /*th {
   text-align: left;
 }

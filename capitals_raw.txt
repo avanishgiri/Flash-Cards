@@ -1,0 +1,50 @@
+Alabama -  !    Montgomery  %    155.4   No  205,764 374,536 Birmingham is the state's largest city
+Alaska  -  !    Juneau  %    %.7  No  31,275      Juneau is the largest capital by land area. Anchorage is the state's largest city.
+Arizona -  !    Phoenix %    474.9   Yes 1,445,632   4,192,887   Phoenix is the most populous U.S. state capital and only capital with more than 1 million citizens
+Arkansas    -  !    Little Rock %    116.2   Yes 193,524 877,091 Little Rock is the Capital of Arkansas, Pulaski County, Arkansas Seat as well as the Township Seat.
+California  -  !    Sacramento  %    97.2    No  466,488 2,527,123   The Supreme Court of California is headquartered in San Francisco. Los Angeles is the state's largest city.
+Colorado    -  !    Denver  %    153.4   Yes 600,158 2,552,195   Denver was called Denver City until %.
+Connecticut -  !    Hartford    %    17.3    No  124,512 1,212,381   Bridgeport is the state's largest city, but Hartford is the largest metro area.
+Delaware    -  !    Dover   %    22.4    No  36,047  162,310 Longest-serving capital in terms of statehood. Wilmington is the state's largest city.
+Florida -  !    Tallahassee %    95.7    No  181,412 367,413 Jacksonville is the largest city, and Miami has the largest metro area.
+Georgia -  !    Atlanta %    131.7   Yes 420,003 5,268,860   
+Hawaii  -  !    Honolulu    %    85.7    Yes 337,256 953,207 
+Idaho   -  !    Boise   %    63.8    Yes 205,671 616,561 
+Illinois    -  !    Springfield %    54.0    No  116,250 208,182 Chicago is the state's largest city.
+Indiana -  !    Indianapolis    %    361.5   Yes 829,718 1,756,221   In addition to being the second-largest state capital, Indianapolis is also the second largest city in the Midwest.
+Iowa    -  !    Des Moines  %    75.8    Yes 203,433 580,255 
+Kansas  -  !    Topeka  %    56.0    No  127,473 230,824 Wichita is the state's largest city.
+Kentucky    -  !    Frankfort   %    14.7    No  25,527  70,758  Louisville is the state's largest city. Frankfort ranks as the twelfth most populous city in the state.
+Louisiana   -  !    Baton Rouge %    76.8    No  229,553 802,484 New Orleans is the state's largest city and home to the Louisiana Supreme Court.
+Maine   -  !    Augusta %    55.4    No  19,136  117,114 Augusta was officially made the capital %, but the legislature did not sit there until %. Portland is the state's largest city.
+Maryland    -  !    Annapolis   %    6.73    No  38,394      Annapolis is the third-longest serving capital in the United States after Santa Fe and Boston. Its capitol building is the oldest still in use. It is also the smallest capital by land area. Baltimore is the state's largest city.
+Massachusetts   -  !    Boston  %    48.4    Yes 617,594 4,522,858   Boston is the longest continuously serving capital in the United States. The Boston-Worcester-Manchester Combined Statistical Area encompasses the state capitals of Massachusetts, New Hampshire, and Rhode Island.
+Michigan    -  !    Lansing %    35.0    No  114,297 464,036 Lansing is the only state capital that is not also the county seat of the county in which it is situated. Detroit is the state's largest city.
+Minnesota   -  !    Saint Paul  %    52.8    No  285,068 3,502,891   Minneapolis is the state's largest city; it and Saint Paul form the core of the state's largest metropolitan area.
+Mississippi -  !    Jackson %    104.9   Yes 173,514 539,057 
+Missouri    -  !    Jefferson City  %    27.3    No  43,079  149,807 Kansas City is the state's largest city, and Greater St. Louis is the state's largest metropolitan area.
+Montana -  !    Helena  %    14.0    No  28,190  74,801  Billings is the state's largest city.
+Nebraska    -  !    Lincoln %    74.6    No  258,379 302,157 Omaha is the state's largest city.
+Nevada  -  !    Carson City %    143.4   No  55,274      Las Vegas is the state's largest city.
+New Hampshire   -  !    Concord %    64.3    No  42,695      Manchester is the state's largest city.
+New Jersey  -  !    Trenton %    7.66    No  84,913  366,513 Newark is the state's largest city. Trenton served as the - capital for a short period in the late 18th century.
+New Mexico  -  !    Santa Fe    %    37.3    No  75,764  183,732 Santa Fe is the longest serving capital in the United States. El Paso del Norte served as the capital of the Santa Fe de Nuevo MÃ©xico colony-in-exile during the Pueblo Revolt of %â%. Santa Fe has the highest elevation of any state capital. Albuquerque is the state's largest city.
+New York    -  !    Albany  %    21.4    No  97,856  857,592 New York City is the state's largest city.
+North Carolina  -  !    Raleigh %    114.6   No  403,892 1,130,490   Charlotte is the state's largest city.
+North Dakota    -  !    Bismarck    %    26.9    No  61,272  108,779 Fargo is the state's largest city.
+Ohio    -  !    Columbus    %    210.3   Yes 787,033 1,836,536   Columbus is Ohio's largest city, and the fourth-largest state capital, but the Cincinnati and Cleveland metropolitan areas are both larger.
+Oklahoma    -  !    Oklahoma City   %    607.0   Yes 580,000 1,252,987   Oklahoma City is the shortest serving current state capital in the United States.
+Oregon  -  !    Salem   %    45.7    No  154,637 390,738 Portland is the state's largest city.
+Pennsylvania    -  !    Harrisburg  %    8.11    No  49,528  647,390 Philadelphia is the state's largest city.
+Rhode Island    -  !    Providence  %    18.5    Yes 178,042 1,630,956   Providence also served as the capital %â% and %â%. It was one of five co-capitals %â%, and one of two co-capitals %â%.
+South Carolina  -  !    Columbia    %    125.2   Yes 129,272 805,106 
+South Dakota    -  !    Pierre  %    13.0    No  13,646      Sioux Falls is the state's largest city.
+Tennessee   -  !    Nashville   %    473.3   No  635,710 1,582,264   Memphis is the state's largest city, and Nashville is the largest metro area.
+Texas   -  !    Austin  %    251.5   No  790,390 1,716,291   Houston is the state's largest city and the previous capital, and DallasâFort Worth is the largest metro area. Austin is the largest state capital that is not also the state's largest city.
+Utah    -  !    Salt Lake City  %    109.1   Yes 186,440 1,124,197   
+Vermont -  !    Montpelier  %    10.2    No  7,855       Montpelier is the least populous U.S. state capital. Burlington is the state's largest city.
+Virginia    -  !    Richmond    %    60.1    No  204,214 1,231,675   Virginia Beach is the state's largest city, and Northern Virginia is the state's largest metro area.
+Washington  -  !    Olympia %    16.7    No  46,478  234,670 Seattle is the state's largest city.
+West Virginia   -  !    Charleston  %    31.6    Yes 51,400  304,214 
+Wisconsin   -  !    Madison %    68.7    No  233,209 561,505 Milwaukee is the state's largest city.
+Wyoming -  !    Cheyenne    %    21.1    Yes 59,466  91,738  
