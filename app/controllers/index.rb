@@ -1,13 +1,12 @@
 get '/' do
-  p "NOW IN HOME"
   @decks = Deck.all
-  @user = User.where('id = ?',session[:user_id]).to_a[0]
+  @user = User.find_by_id(session[:id])
   erb :index
 end
 
 post '/signup' do
-  @user = create_user
-  session[:id] = @user.id
+  user = create_user
+  session[:id] = user.id
   redirect '/'
 end
 

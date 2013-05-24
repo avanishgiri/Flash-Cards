@@ -24,7 +24,7 @@ post '/answer' do
     p "Incrementing count"
     @round.save
     unless @card
-      return erb :_results
+      redirect "/"
     end
     return erb :_question
   end

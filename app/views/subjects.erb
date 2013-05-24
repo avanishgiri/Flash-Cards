@@ -1,13 +1,16 @@
-<h1><%= @subject.name%></h1>
-<% if @subject.decks %> 
-<% @subject.decks.each do |deck| %>
-<% @deck = Deck.find_by_id(deck.id) %>  
-<p><%= @deck.cards.all %></p>
-<div id="deck">
-  <ul>
-    <li><a href="/play/<%= deck.id %>"><%= deck.title %></a><br><br>
-  </ul>
-</div>
-  <% end %>
+<div id="subjects">
+  <h1><%= @subject.name%></h1>
+
+  <% if @subject.decks %> 
+    <% @subject.decks.each do |deck| %>  
+      <p><%= deck.cards.all %></p>
+      <div id="deck-<%= deck.id %>">
+      
+        <ul>
+          <li><a href="/play/<%= deck.id %>"><%= deck.title %></a><br><br>
+        </ul>
+
+      </div>
+    <% end %>
   <% end %>
 </div>

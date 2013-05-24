@@ -41,28 +41,7 @@
   <% end %>
 
   <% if @user %> 
-    <div class='hero-unit'>
-      <% p @user%> 
-      <h1> Welcome <%= @user %></h1>
-      <h2> to your BARR Flashcards Profile Page </h2>
-
-      <div class='span4' id='stats'>
-        <h3> Here are the decks you've played so far: </h3>  
-      </div>
-    
-      <div class='span4'>
-        <h3> Create a deck of custom flashcards!</h3>
-        <h4>Give your deck a name:</h4>
-        <form action="/create_deck" name="title" method="post">
-          <input type="text" name="title" placeholder="Deck title">
-        <h4>What subject does it belong to?</h4>
-        <form action="/create_deck" name="name" method="post">
-          <input type="text" name="name" placeholder="Subject">
-          <input class="submit" type="submit" value="Submit">
-        </form>
-      </div>
-
-    </div>
+    <%= erb(:_user, :layout => false, :locals => locals) %>
   <% end %> 
 
 </div>
